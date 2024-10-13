@@ -1,0 +1,73 @@
+
+.banner{
+    width: 100%;
+    height: 110vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 10%;
+    left: calc(50% - 130px);
+    transform-style: preserve-3d;
+    transform:perspective(1000px);
+    animation: autoRun 20s linear infinite;
+ 
+   }
+   @keyframes autoRun {
+    from{
+        transform: perspective(1000px) rotateX(-14deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-14deg) rotateY(360deg);
+    }        
+   }
+
+.banner .slider .item{
+    position:absolute;
+    inset: 0 0 0 0;
+    transform: 
+    rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+    translateZ(550px);
+}
+.banner .slider .item img{
+    width: 120%;
+    height: 90%;
+    object-fit: cover;
+}
+/* Container for both h1 and h2 */
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width for flexible design */
+    padding: 50px; /* Optional padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to left */
+}
+
+/* H1 - Rim Code */
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 8em; /* Adjust font size */
+    line-height: 1em;
+    color: #25283B;
+    margin: 0; /* Remove margin */
+    background: linear-gradient(#0c8dd8 , #70ce9f, #f31794); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* H2 - Do everything... */
+.banner .content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em; /* Adjust font size */
+    margin-top: 10px; /* Space between h1 and h2 */
+    color: #000; /* Default color */
+    background: linear-gradient(#90cef3 , #70ce9f, #f31794); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
