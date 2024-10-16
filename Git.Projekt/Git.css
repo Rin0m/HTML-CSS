@@ -1,4 +1,3 @@
-
 :root {
     --color-white-shade: #f0f0f0; /* Lichtgrau */
     --color-black: white; /* Dunkelblau */
@@ -112,3 +111,7 @@ ul {
     padding: 0;
     margin: 0;
 }
+ main {
+    margin-left: 20px; 
+    margin-right: 20px;
+ }
